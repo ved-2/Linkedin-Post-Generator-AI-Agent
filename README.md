@@ -217,7 +217,7 @@ linkedin-post-generator-ai-agent/
 Clone repository:
 
 ```bash
-git clone https://github.com/yourusername/linkedin-post-generator-ai-agent.git
+git clone https://github.com/ved-2/linkedin-post-generator-ai-agent.git
 
 cd linkedin-post-generator-ai-agent
 ```
