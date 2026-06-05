@@ -10,15 +10,14 @@ import streamlit as st
 
 load_dotenv()
 
-GROQ_API_KEY = (
-    st.secrets.get("GROQ_API_KEY")
-    or os.getenv("GROQ_API_KEY")
-)
+try:
+    GROQ_API_KEY = st.secrets["GROQ_API_KEY"]
+except:
+    GROQ_API_KEY = None
 
 if not GROQ_API_KEY:
-    raise ValueError(
-        "GROQ_API_KEY not found in .env"
-    )
+    GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+
 
 
 
