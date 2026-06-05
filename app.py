@@ -11,16 +11,13 @@ st.markdown(
     "Generate a LinkedIn post, get AI evaluation, and improve it with human feedback — all without popups."
 )
 
-# Sidebar controls (audience, tone, length, emojis, approve/reject)
+
 st.sidebar.header("Optimization Controls")
 audience = st.sidebar.selectbox("Audience", ["Recruiters", "Developers", "Students", "Founders"], index=1)
 tone = st.sidebar.selectbox("Tone", ["Professional", "Technical", "Storytelling", "Motivational", "Founder"], index=2)
 length = st.sidebar.selectbox("Length", ["Short", "Medium", "Long"], index=1)
 emojis = st.sidebar.checkbox("Add emojis", value=False)
 
-# st.sidebar.markdown("---")
-# approve_choice = st.sidebar.radio("Approve or Reject", ["Pending", "Approve", "Reject"], index=0)
-# reject_feedback = st.sidebar.text_area("If rejecting, what's the feedback?", value="", height=80)
 
 
 def init_state() -> None:
@@ -166,18 +163,6 @@ if current_post:
     if approve_pressed:
         st.success("Approved — your LinkedIn post is ready to publish.")
 
-# # Sidebar approve/reject handling
-# if approve_choice == "Approve":
-#     st.sidebar.success("Post marked Approved")
-# elif approve_choice == "Reject":
-#     st.sidebar.warning("Post marked Rejected")
-#     if reject_feedback.strip():
-#         st.sidebar.info("Reviewer feedback saved")
-
-# if st.session_state.status_message:
-#     st.info(st.session_state.status_message)
-
-# LinkedIn quick-share: copy to clipboard and open LinkedIn composer
 if current_post:
     try:
         

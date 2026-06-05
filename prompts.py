@@ -1,6 +1,3 @@
-# ==========================================
-# Generate LinkedIn Post Prompt
-# ==========================================
 
 GENERATE_POST_PROMPT = """
 You are an expert LinkedIn content creator.
@@ -24,10 +21,6 @@ Return only the LinkedIn post.
 """
 
 
-# ==========================================
-# Engagement Evaluator Prompt
-# ==========================================
-
 ENGAGEMENT_PROMPT = """
 You are a LinkedIn engagement expert.
 
@@ -47,11 +40,6 @@ Post:
 
 Return structured feedback.
 """
-
-
-# ==========================================
-# Readability Evaluator Prompt
-# ==========================================
 
 READABILITY_PROMPT = """
 You are a content writing expert.
@@ -74,10 +62,6 @@ Return structured feedback.
 """
 
 
-# ==========================================
-# Recruiter Evaluator Prompt
-# ==========================================
-
 RECRUITER_PROMPT = """
 You are a senior technical recruiter.
 
@@ -97,11 +81,6 @@ Post:
 
 Return structured feedback.
 """
-
-
-# ==========================================
-# Optimization Prompt
-# ==========================================
 
 OPTIMIZE_POST_PROMPT = """
 You are an elite LinkedIn ghostwriter.
@@ -133,9 +112,6 @@ Generate a completely improved version.
 """
 
 
-# ==========================================
-# Final Evaluation Prompt
-# ==========================================
 
 FINAL_EVALUATION_PROMPT = """
 You are a LinkedIn content strategist.
