@@ -5,12 +5,14 @@ from dotenv import load_dotenv
 from models import Feedback
 from models import FinalEvaluation
 from langchain_groq import ChatGroq
+import streamlit as st
 
 
 load_dotenv()
 
-GROQ_API_KEY = os.getenv(
-    "GROQ_API_KEY"
+GROQ_API_KEY = (
+    st.secrets.get("GROQ_API_KEY")
+    or os.getenv("GROQ_API_KEY")
 )
 
 if not GROQ_API_KEY:
